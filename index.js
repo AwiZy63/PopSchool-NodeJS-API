@@ -19,6 +19,11 @@ app.get('/', (req, res) => {
 app.use('/user', require("./src/routes/user.routes"));
 // localhost:3030/user/signup
 // body: { username: "nomdutilisateur", email: "adresse@email.com", password: "123456"}
+
+// Post routes
+app.use('/post', require("./src/routes/post.routes"));
+
+
 app.listen(port, async () => {
     try {
         await sequelize.authenticate();
